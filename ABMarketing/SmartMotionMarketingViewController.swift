@@ -19,16 +19,17 @@ public enum SmartMotionMarketingVariants {
 }
 
 final public class SmartMotionMarketingViewController: UIViewController {
-
-    static let smartMotionMarketingKey: String = "smartMotionMarketingKey"
     
     private let delegate: SmartKitMarketingDelegate
     private let variant: SmartMotionMarketingVariants
+    private let defaults: UserDefaults
     
     public init(delegate: SmartKitMarketingDelegate,
-         variant: SmartMotionMarketingVariants = .A) {
+                variant: SmartMotionMarketingVariants = .A,
+                defaults: UserDefaults = UserDefaults.standard) {
         self.delegate = delegate
         self.variant = variant
+        self.defaults = defaults
         
         super.init(nibName: nil, bundle: nil)
         self.modalPresentationStyle = .overCurrentContext
@@ -384,6 +385,17 @@ final public class SmartMotionMarketingViewController: UIViewController {
     private func addCloseTapGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeButtonAction))
         view.addGestureRecognizer(tap)
+    }
+    
+    // MARK: - Defaults
+    private let smartMotionMarketingKey: String = "smartMotionMarketingKey"
+    
+    public func hasSeenPopupBefore() -> Bool {
+        defaults.bool(forKey: smartMotionMarketingKey)
+    }
+    
+    public func setHasSeenPopupBefore() {
+        defaults.set(true, forKey: smartMotionMarketingKey)
     }
 }
 
