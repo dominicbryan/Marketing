@@ -17,7 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
 
             let window = UIWindow(windowScene: windowScene)
+            
+            /// Comment out TableViewController to see pop-up. Comment out ViewController to see cell
             let viewController = TableViewController()
+//            let viewController = ViewController()
 
             let navigation = UINavigationController(rootViewController: viewController)
             window.rootViewController = navigation

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var smartMotionViewController = SmartMotionMarketingViewController(delegate: self, variant: .B)
+    lazy var smartMotionViewController = SmartMotionMarketingViewController(delegate: self, variant: .A)
     
     
     override func viewDidLoad() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol SmartKitMarketingDelegate {
+public protocol SmartKitMarketingDelegate: class {
     func smartMotionKitBuyPressed()
     func smartSenseKitBuyPressed()
     func findOutMorePressed()
@@ -20,7 +20,7 @@ public enum SmartMotionMarketingVariants {
 
 final public class SmartMotionMarketingViewController: UIViewController {
     
-    private let delegate: SmartKitMarketingDelegate
+    private weak var delegate: SmartKitMarketingDelegate?
     private let variant: SmartMotionMarketingVariants
     private let defaults: UserDefaults
     
@@ -362,17 +362,17 @@ final public class SmartMotionMarketingViewController: UIViewController {
     // MARK: - Setup Button Targets
     
     @objc private func smartMotionKitBuyButtonAction() {
-        delegate.smartMotionKitBuyPressed()
+        delegate?.smartMotionKitBuyPressed()
         self.dismiss(animated: true, completion: nil)
     }
     
     @objc private func smartSenseKitBuyButtonAction() {
-        delegate.smartSenseKitBuyPressed()
+        delegate?.smartSenseKitBuyPressed()
         self.dismiss(animated: true, completion: nil)
     }
     
     @objc private func findOutMoreButtonAction() {
-        delegate.findOutMorePressed()
+        delegate?.findOutMorePressed()
         self.dismiss(animated: true, completion: nil)
     }
     
