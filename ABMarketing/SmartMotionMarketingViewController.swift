@@ -20,6 +20,8 @@ public enum SmartMotionMarketingVariants {
 
 final public class SmartMotionMarketingViewController: UIViewController {
 
+    static let smartMotionMarketingKey: String = "smartMotionMarketingKey"
+    
     private let delegate: SmartKitMarketingDelegate
     private let variant: SmartMotionMarketingVariants
     

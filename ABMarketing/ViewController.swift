@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     lazy var smartMotionViewController = SmartMotionMarketingViewController(delegate: self, variant: .B)
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,13 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.present(smartMotionViewController, animated: true, completion: nil)
+        
+        /// Checking to see if we have seen the pop-up before 
+        if !defaults.bool(forKey: SmartMotionMarketingViewController.smartMotionMarketingKey) {
+            navigationController?.present(smartMotionViewController, animated: true) { [weak self] in
+                self?.defaults.set(true, forKey: SmartMotionMarketingViewController.smartMotionMarketingKey)
+            }
+        }
     }
     
 }
