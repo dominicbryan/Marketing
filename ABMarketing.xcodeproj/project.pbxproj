@@ -14,6 +14,8 @@
 		2A1B97442488ECB500FC1B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1B97432488ECB500FC1B23 /* Assets.xcassets */; };
 		2A1B97472488ECB500FC1B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1B97452488ECB500FC1B23 /* LaunchScreen.storyboard */; };
 		2ACFB2F7248926380018915A /* SmartMotionMarketingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFB2F6248926380018915A /* SmartMotionMarketingViewController.swift */; };
+		2ACFB3052489560B0018915A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFB3042489560B0018915A /* TableViewController.swift */; };
+		2ACFB307248956350018915A /* SmartMotionMarketingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFB306248956350018915A /* SmartMotionMarketingCell.swift */; };
 		2AE173652488FD22002302F5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE173532488FD22002302F5 /* Montserrat-Bold.ttf */; };
 		2AE173662488FD22002302F5 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE173542488FD22002302F5 /* Montserrat-Light.ttf */; };
 		2AE173672488FD22002302F5 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE173552488FD22002302F5 /* Montserrat-SemiBold.ttf */; };
@@ -44,6 +46,8 @@
 		2A1B97462488ECB500FC1B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A1B97482488ECB500FC1B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ACFB2F6248926380018915A /* SmartMotionMarketingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartMotionMarketingViewController.swift; sourceTree = "<group>"; };
+		2ACFB3042489560B0018915A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2ACFB306248956350018915A /* SmartMotionMarketingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartMotionMarketingCell.swift; sourceTree = "<group>"; };
 		2AE173532488FD22002302F5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		2AE173542488FD22002302F5 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		2AE173552488FD22002302F5 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				2A1B97452488ECB500FC1B23 /* LaunchScreen.storyboard */,
 				2A1B97482488ECB500FC1B23 /* Info.plist */,
 				2ACFB2F6248926380018915A /* SmartMotionMarketingViewController.swift */,
+				2ACFB3042489560B0018915A /* TableViewController.swift */,
+				2ACFB306248956350018915A /* SmartMotionMarketingCell.swift */,
 			);
 			path = ABMarketing;
 			sourceTree = "<group>";
@@ -221,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACFB307248956350018915A /* SmartMotionMarketingCell.swift in Sources */,
 				2A1B973F2488ECB200FC1B23 /* ViewController.swift in Sources */,
 				2ACFB2F7248926380018915A /* SmartMotionMarketingViewController.swift in Sources */,
 				2A1B973B2488ECB200FC1B23 /* AppDelegate.swift in Sources */,
+				2ACFB3052489560B0018915A /* TableViewController.swift in Sources */,
 				2A1B973D2488ECB200FC1B23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
